@@ -36,7 +36,48 @@ func answer2() string {
 	return hello.world
 }
 
+type academy struct {
+	academy string
+}
+
+type tech struct {
+	tech academy
+}
+
+type man struct {
+	man []tech
+}
+
+type str struct {
+	str [][][]man
+}
+
+func answer3() string {
+	obj := str{
+		str: [][][]man{
+			3: {
+				1: {
+					2: man{
+						man: []tech{
+							{
+								tech: academy{
+									academy: "Tech Academy",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	}
+
+	return obj.str[3][1][2].man[0].tech.academy
+}
+
 func main() {
 	fmt.Println(answer1())
 	fmt.Println(answer2())
+	fmt.Println(answer3())
+	// fmt.Println(answer4())
+	// fmt.Println(answer5())
 }
