@@ -102,10 +102,23 @@ func answer4() string {
 	return (my[0].favourite[3].fruit.is)
 }
 
+type num struct {
+	first  [2]int
+	second []int
+}
+
+func answer5() int {
+	num := num{
+		first:  [2]int{1, 17},
+		second: []int{10, 13, 15},
+	}
+	return (num.first[1] + num.second[2])
+}
+
 func main() {
 	fmt.Println(answer1())
 	fmt.Println(answer2())
 	fmt.Println(answer3())
 	fmt.Println(answer4())
-	// fmt.Println(answer5())
+	fmt.Println(answer5())
 }
