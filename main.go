@@ -74,10 +74,38 @@ func answer3() string {
 	return obj.str[3][1][2].man[0].tech.academy
 }
 
+type fruit struct {
+	is string
+}
+
+type favorite struct {
+	fruit fruit
+}
+
+type Person struct {
+	favourite []favorite
+}
+
+func answer4() string {
+	my := []Person{
+		{
+			favourite: []favorite{
+				{},
+				{},
+				{},
+				{fruit: fruit{
+					is: "Apple",
+				}},
+			},
+		},
+	}
+	return (my[0].favourite[3].fruit.is)
+}
+
 func main() {
 	fmt.Println(answer1())
 	fmt.Println(answer2())
 	fmt.Println(answer3())
-	// fmt.Println(answer4())
+	fmt.Println(answer4())
 	// fmt.Println(answer5())
 }
