@@ -14,7 +14,7 @@ type c struct {
 	are b
 }
 
-func answer() string {
+func answer1() string {
 	we := c{
 		are: b{
 			the: a{
@@ -22,9 +22,21 @@ func answer() string {
 			},
 		},
 	}
-	return (we.are.the.best)
+	return we.are.the.best
+}
+
+type world struct {
+	world string
+}
+
+func answer2() string {
+	hello := world{
+		world: "Hello World",
+	}
+	return hello.world
 }
 
 func main() {
-	fmt.Println(answer())
+	fmt.Println(answer1())
+	fmt.Println(answer2())
 }
