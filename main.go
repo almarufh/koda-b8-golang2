@@ -14,7 +14,7 @@ type c struct {
 	are b
 }
 
-func main() {
+func answer() string {
 	we := c{
 		are: b{
 			the: a{
@@ -22,5 +22,9 @@ func main() {
 			},
 		},
 	}
-	fmt.Println(we.are.the.best)
+	return (we.are.the.best)
+}
+
+func main() {
+	fmt.Println(answer())
 }
